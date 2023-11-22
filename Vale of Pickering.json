@@ -66,92 +66,89 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "background.png",
+        "file": "assets/background.png",
         "kind": "image",
         "metadata": "",
-        "name": "background.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "table_chairs.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "table_chairs.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "detective.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "detective.png",
+        "name": "assets\\background.png",
         "smoothed": true,
         "userAdded": false
       },
       {
         "alwaysLoaded": false,
-        "file": "chest.png",
+        "file": "assets/table_chairs.png",
         "kind": "image",
         "metadata": "",
-        "name": "chest.png",
+        "name": "assets\\table_chairs.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/detective.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\detective.png",
         "smoothed": true,
         "userAdded": false
       },
       {
         "alwaysLoaded": false,
-        "file": "guest1.png",
+        "file": "assets/chest.png",
         "kind": "image",
         "metadata": "",
-        "name": "guest1.png",
+        "name": "assets\\chest.png",
         "smoothed": true,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "guest2.png",
+        "file": "assets/guest1.png",
         "kind": "image",
         "metadata": "",
-        "name": "guest2.png",
+        "name": "assets\\guest1.png",
         "smoothed": true,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "inventory.png",
+        "file": "assets/guest2.png",
         "kind": "image",
         "metadata": "",
-        "name": "inventory.png",
+        "name": "assets\\guest2.png",
         "smoothed": true,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "knife_pop_up.png",
+        "file": "assets/inventory.png",
         "kind": "image",
         "metadata": "",
-        "name": "knife_pop_up.png",
+        "name": "assets\\inventory.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/knife_pop_up.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\knife_pop_up.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/knife_inventory.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\knife_inventory.png",
         "smoothed": true,
         "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "knife_inventory.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "knife_inventory.png",
-        "smoothed": true,
-        "userAdded": true
       }
     ],
     "resourceFolders": []
   },
   "objects": [],
-  "objectsFolderStructure": {
-    "folderName": "__ROOT"
-  },
   "objectsGroups": [],
   "variables": [],
   "layouts": [
@@ -175,7 +172,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.546875,
+        "zoomFactor": 0.4789341884535245,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -213,7 +210,6 @@
           "locked": true,
           "name": "Table",
           "persistentUuid": "8c7bd062-dc47-494c-a982-03b7c718e523",
-          "sealed": true,
           "width": 0,
           "x": 0,
           "y": 0,
@@ -230,8 +226,8 @@
           "name": "Detective",
           "persistentUuid": "7570ae1b-d7d9-4ed6-abef-e29de94656e7",
           "width": 0,
-          "x": -12,
-          "y": -9,
+          "x": -4,
+          "y": 0,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -305,6 +301,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Backgroung",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -321,7 +318,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "background.png",
+                      "image": "assets\\background.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -365,11 +362,20 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Table",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": false,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -381,7 +387,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "table_chairs.png",
+                      "image": "assets\\table_chairs.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -425,17 +431,12 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Detective",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [
-            {
-              "checkCollisionMask": true,
-              "name": "Draggable",
-              "type": "DraggableBehavior::Draggable"
-            }
-          ],
+          "behaviors": [],
           "animations": [
             {
               "name": "",
@@ -447,7 +448,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "detective.png",
+                      "image": "assets\\detective.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -488,9 +489,10 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": false,
+          "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Chest",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -507,7 +509,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "chest.png",
+                      "image": "assets\\chest.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -551,6 +553,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Guest1",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -567,7 +570,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "guest1.png",
+                      "image": "assets\\guest1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -611,6 +614,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Guest2",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -627,7 +631,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "guest2.png",
+                      "image": "assets\\guest2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -671,6 +675,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Inventory",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -687,7 +692,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "inventory.png",
+                      "image": "assets\\inventory.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -731,6 +736,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Knife",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -747,7 +753,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "knife_pop_up.png",
+                      "image": "assets\\knife_pop_up.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -791,6 +797,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Knife_inventory",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -807,7 +814,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "knife_inventory.png",
+                      "image": "assets\\knife_inventory.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -848,38 +855,6 @@
           ]
         }
       ],
-      "objectsFolderStructure": {
-        "folderName": "__ROOT",
-        "children": [
-          {
-            "objectName": "Backgroung"
-          },
-          {
-            "objectName": "Table"
-          },
-          {
-            "objectName": "Detective"
-          },
-          {
-            "objectName": "Chest"
-          },
-          {
-            "objectName": "Guest1"
-          },
-          {
-            "objectName": "Guest2"
-          },
-          {
-            "objectName": "Inventory"
-          },
-          {
-            "objectName": "Knife"
-          },
-          {
-            "objectName": "Knife_inventory"
-          }
-        ]
-      },
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -893,16 +868,7 @@
               ]
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlayerAuthentication::DisplayAuthenticationBanner"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ]
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -1004,6 +970,110 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Detective",
+                "-",
+                "5"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Right"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Detective",
+                "+",
+                "5"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Up"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "Detective",
+                "-",
+                "5"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Down"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "Detective",
+                "+",
+                "5"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -1051,6 +1121,10 @@
         {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
         },
         {
           "name": "Resizable",
