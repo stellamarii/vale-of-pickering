@@ -95,7 +95,7 @@
         "alwaysLoaded": false,
         "file": "assets/chest.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/chest.png\",\"extension\":\".png\"}",
         "name": "assets\\chest.png",
         "smoothed": true,
         "userAdded": true
@@ -331,6 +331,51 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\suspect_button_pressed.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/chest_opened.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/chest_opened.png\",\"extension\":\".png\"}",
+        "name": "assets\\chest_opened.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_chest.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\chest",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_chest_opened.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\chest_opened",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_chest2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\chest2",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_chest3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\chest3",
         "smoothed": true,
         "userAdded": true
       }
@@ -913,7 +958,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 37,
+          "height": 7,
           "layer": "",
           "name": "Blackbox2",
           "persistentUuid": "6aef104d-e077-4a82-bc88-155b459762b7",
@@ -1139,16 +1184,47 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "assets\\chest",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\chest.png",
+                      "image": "assets\\chest3",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "assets\\chest_opened",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\chest_opened",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2143,6 +2219,67 @@
           "conditions": [
             {
               "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Detective",
+                "Chest",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+              },
+              "parameters": [
+                "Chest",
+                "Animation",
+                "=",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Detective",
+                "Chest",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+              },
+              "parameters": [
+                "Chest",
+                "Animation",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::And"
               },
               "parameters": [],
@@ -2311,7 +2448,7 @@
               "parameters": [
                 "Detective",
                 "-",
-                "11"
+                "15"
               ]
             }
           ]
@@ -2337,7 +2474,7 @@
               "parameters": [
                 "Detective",
                 "+",
-                "11"
+                "15"
               ]
             }
           ]
@@ -2363,7 +2500,7 @@
               "parameters": [
                 "Detective",
                 "-",
-                "11"
+                "15"
               ]
             }
           ]
@@ -2389,7 +2526,7 @@
               "parameters": [
                 "Detective",
                 "+",
-                "11"
+                "15"
               ]
             }
           ]
@@ -2579,7 +2716,7 @@
           "camera3DNearPlaneDistance": 0.1,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
-          "isLocked": true,
+          "isLocked": false,
           "name": "",
           "renderingType": "",
           "visibility": true,
