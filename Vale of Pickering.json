@@ -315,6 +315,24 @@
         "name": "assets\\knife_inventory2.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/suspect_button.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\suspect_button.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/suspect_button_pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\suspect_button_pressed.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -941,42 +959,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 100,
-          "layer": "UI",
-          "name": "Button",
-          "persistentUuid": "f598484b-af84-495e-933f-4696530fc5d5",
-          "width": 430,
-          "x": 1466,
-          "y": 951,
-          "zOrder": 37,
-          "numberProperties": [
-            {
-              "name": "animation",
-              "value": 0
-            }
-          ],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "name": "ButtonText",
-          "persistentUuid": "8dd41179-bcdb-4ade-baab-d10dd5e5aa04",
-          "width": 0,
-          "x": 1499,
-          "y": 980,
-          "zOrder": 38,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "layer": "Items",
@@ -1065,6 +1047,21 @@
           "x": -13,
           "y": -34,
           "zOrder": 41,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "SuspectButton",
+          "persistentUuid": "a8a40251-f511-4b0f-bb26-cb9ca8e59325",
+          "width": 0,
+          "x": 1594,
+          "y": 934,
+          "zOrder": 43,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1826,6 +1823,114 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SuspectButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\suspect_button.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 15,
+                            "y": 11
+                          },
+                          {
+                            "x": 250,
+                            "y": 11
+                          },
+                          {
+                            "x": 250,
+                            "y": 104
+                          },
+                          {
+                            "x": 15,
+                            "y": 104
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\suspect_button_pressed.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 15,
+                            "y": 11
+                          },
+                          {
+                            "x": 250,
+                            "y": 11
+                          },
+                          {
+                            "x": 250,
+                            "y": 104
+                          },
+                          {
+                            "x": 15,
+                            "y": 104
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1872,6 +1977,9 @@
           },
           {
             "objectName": "Something_from_clock_inventory"
+          },
+          {
+            "objectName": "SuspectButton"
           }
         ]
       },
@@ -2352,7 +2460,7 @@
               },
               "parameters": [
                 "Detective",
-                "Button",
+                "SuspectButton",
                 "",
                 "",
                 ""
@@ -2365,7 +2473,7 @@
                 "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
               },
               "parameters": [
-                "Button",
+                "SuspectButton",
                 "Animation",
                 "=",
                 "1"
@@ -2383,7 +2491,7 @@
               },
               "parameters": [
                 "Detective",
-                "Button",
+                "SuspectButton",
                 "",
                 "",
                 ""
@@ -2396,7 +2504,7 @@
                 "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
               },
               "parameters": [
-                "Button",
+                "SuspectButton",
                 "Animation",
                 "=",
                 "0"
@@ -2419,7 +2527,7 @@
                   },
                   "parameters": [
                     "Detective",
-                    "Button",
+                    "SuspectButton",
                     "",
                     "",
                     ""
@@ -2876,6 +2984,10 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
+        },
+        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
@@ -3256,23 +3368,7 @@
                 "=",
                 "0"
               ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "b"
-              ]
-            }
-          ],
-          "actions": [
+            },
             {
               "type": {
                 "value": "PopScene"
@@ -3773,21 +3869,6 @@
           "x": 108,
           "y": 119,
           "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 983,
-          "layer": "Items",
-          "name": "Detective",
-          "persistentUuid": "4d2d927b-6498-4292-a244-c7f7e4f7955d",
-          "width": 550,
-          "x": 242,
-          "y": 247,
-          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
