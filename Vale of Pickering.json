@@ -1439,21 +1439,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "Items",
-          "name": "NewText",
-          "persistentUuid": "eb92e9f3-f824-4774-9be9-8a525c127485",
-          "width": 0,
-          "x": 674,
-          "y": 284,
-          "zOrder": 56,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -8240,21 +8225,6 @@
           "x": 872,
           "y": -1,
           "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "NewText",
-          "persistentUuid": "8d8a941f-99bb-4770-9da7-b61e69d6fd6a",
-          "width": 0,
-          "x": 706,
-          "y": 352,
-          "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
